@@ -3,7 +3,7 @@ import mongoose from "mongoose";
  
 //  all workouts
 const getWorkouts = async (req, res) => {
-  const user_id = req.user._id
+  const user_id = req.user.id
 
   const workouts = await Workout.find({ user_id }).sort({createdAt: -1})
 

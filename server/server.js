@@ -37,10 +37,10 @@ app.get('*', (req,res) => res.sendFile((__dirname, '/client/build/index.html')))
 
 
 // connect to db
-mongoose.connect(process.env.MONGO_URI)
+mongoose.connect(process.env.MONGO_URI, {dbName: "Cluster0"})
   .then(() => {
     // listen to port  // listen for requests
-    app.listen(process.env.PORT, () => {
+    app.listen(4000,  () => {
       console.log('connected to db $ listening for requests on port', process.env.PORT)
     })
   })
