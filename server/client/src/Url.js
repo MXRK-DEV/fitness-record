@@ -1,0 +1,1 @@
+export const baseUrl = `https://fitness-app-2j5z.onrender.com`
